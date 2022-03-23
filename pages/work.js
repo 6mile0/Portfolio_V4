@@ -54,7 +54,7 @@ const works = [
         type: 1
     },
     {
-        name: "Portfolio-V4.0",
+        name: "Portfolio_V4",
         discription: "このポートフォリオです。React.jsはちょこちょこ書いていましたが，Next.jsは初めてです。またポートフォリオのデザインから全面刷新したのは2年ぶりです。",
         lang: "Next.js,HTML,CSS",
         link: "https://github.com/6mile0/portfolio-V4.0",
