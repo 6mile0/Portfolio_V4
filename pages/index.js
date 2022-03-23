@@ -155,7 +155,7 @@ const Home = () => {
         <div className="hero wrapper hero-box hero-warpper">
           <div className="hero-body">
             <div className="columns out-box">
-              <div className="column col-12 pf">
+              <div className="column col-12 col-xs-12 pf">
                 <div className="boxContainer out-box">
                   <div className="box">
                     <img className="img-pro" src="/me.jpg" />
@@ -175,160 +175,150 @@ const Home = () => {
 
       <div className="container mg-c">
         <div className="columns">
-          <div className="column col-12">
-            <div className="column col-9 mainBox">
-              <h2>Profile</h2>
-              <table className="table">
-                <tbody>
-                  {Object.keys(profile).map((value, key) => {
-                    return (
-                      <tr key={key}>
-                        <td>{value}</td>
-                        <td>{profile[value]}</td>
-                      </tr>
-                    )
-                  })}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="columns mg-c">
-        <div className="column col-12">
-          <div className="column col-9 mainBox">
-            <h2>Skills</h2>
+          <div className="column col-9 col-xs-11 mainBox">
+            <h2>Profile</h2>
             <table className="table">
               <tbody>
-                {Object.keys(skills).map((value, key) => {
+                {Object.keys(profile).map((value, key) => {
                   return (
                     <tr key={key}>
                       <td>{value}</td>
-                      <td>{skills[value]}</td>
+                      <td>{profile[value]}</td>
                     </tr>
                   )
                 })}
               </tbody>
             </table>
-          </div>
-        </div>
-      </div>
-
-      <div className="columns mg-c">
-        <div className="column col-12">
-          <div className="column col-9 mainBox">
-            <h2>Next Learning</h2>
-            <table className="table">
-              <tbody>
-                {Object.keys(nextLang).map((value, key) => {
-                  return (
-                    <tr key={key}>
-                      <td>{value}</td>
-                      <td>{nextLang[value]}</td>
-                    </tr>
-                  )
-                })}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div className="columns mg-c">
-        <div className="column col-12">
-          <div className="column col-9 mainBox">
-            <h2>Histories</h2>
-            <div className="timeline mg-u">
-              {Object.keys(histories).map((value, key) => {
-                const progress = () => {
-                  if (key == 0) {
-                    return ('Start')
-                  } else if (key == histories.length - 1) {
-                    return ('Now')
-                  } else {
-                    return (key)
-                  }
-                }
-
-                const link = () => {
-                  if (!(histories[key]['link'] == null)) {
-                    return (<a href={histories[key]['link']} target='_blank' rel="noreferrer"><i className="fas fa-external-link-alt"></i></a>)
-                  }
-                }
-
-                if (histories[value]['lg_Icon'] == true) {
-                  return (
-                    <div className="timeline-item" key={key}>
-                      <div className="timeline-left"><a className="timeline-icon icon-lg tooltip" data-tooltip={progress()}></a></div>
-                      <div className="timeline-content">
-                        <div className="tile">
-                          <div className="tile-content">
-                            <p className="tile-subtitle">{histories[value]['date']}</p>
-                            <p className="tile-title">{histories[value]['event']} {link()}</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )
-                } else {
-                  return (
-                    <div className="timeline-item" key={key}>
-                      <div className="timeline-left"><a className="timeline-icon tooltip" data-tooltip={progress()}></a></div>
-                      <div className="timeline-content">
-                        <div className="tile">
-                          <div className="tile-content">
-                            <p className="tile-subtitle">{histories[value]['date']}</p>
-                            <p className="tile-title">{histories[value]['event']} {link()}</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )
-                }
-              })}
-            </div>
           </div>
         </div>
       </div>
 
       <div className="mg-c">
-        <div className="columns">
-          <div className="column col-9 mainBox explain">
-            <h2>Contact</h2>
-            <p>6mile.devドメインより不審なメール等が送付されている場合，誤字脱字，その他ご意見等ございましたら，大変お手数おかけ致しますが下記フォームよりご連絡頂けますと幸いです。</p>
-            <p>※Vercelがストリーミング応答に対応していないため，メッセージの送信に数分かかる場合があります。</p>
+        <div className="columns col-9 col-xs-11 mainBox">
+          <h2>Skills</h2>
+          <table className="table">
+            <tbody>
+              {Object.keys(skills).map((value, key) => {
+                return (
+                  <tr key={key}>
+                    <td>{value}</td>
+                    <td>{skills[value]}</td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-            <div id="result"></div>
-            <div className="columns grid-lg mg-u">
-              <div className="column col-xs-12 mg-d">
-                <form className="form-group" onSubmit={handleSubmit(onSubmit)}>
-                  <div className="form-g">
-                    <label className="form-label">Name</label>
-                    <input className="form-input" name="name" placeholder="お名前" {...register('name', { required: "Required" })} />
-                    {errors.name && <span className="text-error"><i className="fas fa-exclamation-triangle"></i> 名前は必須です</span>}
+      <div className="mg-c">
+        <div className="columns col-9 col-xs-11 mainBox">
+          <h2>Next Learning</h2>
+          <table className="table">
+            <tbody>
+              {Object.keys(nextLang).map((value, key) => {
+                return (
+                  <tr key={key}>
+                    <td>{value}</td>
+                    <td>{nextLang[value]}</td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="mg-c">
+        <div className="col-9 col-xs-11 mainBox">
+          <h2>Histories</h2>
+          <div className="timeline mg-u">
+            {Object.keys(histories).map((value, key) => {
+              const progress = () => {
+                if (key == 0) {
+                  return ('Start')
+                } else if (key == histories.length - 1) {
+                  return ('Now')
+                } else {
+                  return (key)
+                }
+              }
+
+              const link = () => {
+                if (!(histories[key]['link'] == null)) {
+                  return (<a href={histories[key]['link']} target='_blank' rel="noreferrer"><i className="fas fa-external-link-alt"></i></a>)
+                }
+              }
+
+              if (histories[value]['lg_Icon'] == true) {
+                return (
+                  <div className="timeline-item" key={key}>
+                    <div className="timeline-left"><a className="timeline-icon icon-lg tooltip" data-tooltip={progress()}></a></div>
+                    <div className="timeline-content">
+                      <div className="tile">
+                        <div className="tile-content">
+                          <p className="tile-subtitle">{histories[value]['date']}</p>
+                          <p className="tile-title">{histories[value]['event']} {link()}</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-
-                  <div className="form-g">
-                    <label className="form-label">MailAddress</label>
-                    <input type="email" className="form-input" name="email" placeholder="メールアドレス" {...register('email', { required: "Required" })} />
-                    {errors.email && <span className="text-error"><i className="fas fa-exclamation-triangle"></i> メールアドレスは必須です</span>}
+                )
+              } else {
+                return (
+                  <div className="timeline-item" key={key}>
+                    <div className="timeline-left"><a className="timeline-icon tooltip" data-tooltip={progress()}></a></div>
+                    <div className="timeline-content">
+                      <div className="tile">
+                        <div className="tile-content">
+                          <p className="tile-subtitle">{histories[value]['date']}</p>
+                          <p className="tile-title">{histories[value]['event']} {link()}</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                )
+              }
+            })}
+          </div>
+        </div>
+      </div>
 
-                  <div className="form-g">
-                    <label className="form-label">Message</label>
-                    <textarea className="form-input" name="content" placeholder="お問い合わせ内容" rows="3" {...register('content', { required: "Required" })} />
-                    {errors.content && <span className="text-error"><i className="fas fa-exclamation-triangle"></i> お問い合わせ内容は必須です</span>}
-                  </div>
+      <div className="mg-c">
+        <div className="col-9 col-xs-11 mainBox explain">
+          <h2>Contact</h2>
+          <p>6mile.devドメインより不審なメール等が送付されている場合，誤字脱字，その他ご意見等ございましたら，大変お手数おかけ致しますが下記フォームよりご連絡頂けますと幸いです。</p>
+          <p>※Vercelがストリーミング応答に対応していないため，メッセージの送信に数分かかる場合があります。</p>
 
-                  <p>※送信される情報はSSLで暗号化されます。</p>
-                  <p>※いたずら防止のため，IPアドレスを記録しております。</p>
+          <div id="result"></div>
+          <div className="columns grid-lg mg-u">
+            <div className="column col-xs-12 mg-d">
+              <form className="form-group" onSubmit={handleSubmit(onSubmit)}>
+                <div className="form-g">
+                  <label className="form-label">Name</label>
+                  <input className="form-input" name="name" placeholder="お名前" {...register('name', { required: "Required" })} />
+                  {errors.name && <span className="text-error"><i className="fas fa-exclamation-triangle"></i> 名前は必須です</span>}
+                </div>
 
-                  <div className="btn-right mg-btn">
-                    <button className="btn btn-primary" type="submit">Submit</button>
-                  </div>
-                </form>
-              </div>
+                <div className="form-g">
+                  <label className="form-label">MailAddress</label>
+                  <input type="email" className="form-input" name="email" placeholder="メールアドレス" {...register('email', { required: "Required" })} />
+                  {errors.email && <span className="text-error"><i className="fas fa-exclamation-triangle"></i> メールアドレスは必須です</span>}
+                </div>
+
+                <div className="form-g">
+                  <label className="form-label">Message</label>
+                  <textarea className="form-input" name="content" placeholder="お問い合わせ内容" rows="3" {...register('content', { required: "Required" })} />
+                  {errors.content && <span className="text-error"><i className="fas fa-exclamation-triangle"></i> お問い合わせ内容は必須です</span>}
+                </div>
+
+                <p>※送信される情報はSSLで暗号化されます。</p>
+                <p>※いたずら防止のため，IPアドレスを記録しております。</p>
+
+                <div className="btn-right mg-btn">
+                  <button className="btn btn-primary" type="submit">Submit</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
