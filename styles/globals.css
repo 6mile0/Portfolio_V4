@@ -1,0 +1,341 @@
+body {
+  font-family: 'Kiwi Maru', serif;
+}
+
+ul.horizontal-list {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+li.item {
+  display: inline-block;
+  width: 60%;
+  font-size: 48px;
+  color: #fff;
+}
+
+.nav-box {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-btn:hover {
+  text-decoration: none;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.container {
+  padding-top: 150px;
+}
+
+.nav-box {
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0 0 8px gray;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  border-radius: 0px 0px 30px 30px;
+}
+
+.nav-btn {
+  padding: 30px;
+  color: black;
+}
+
+.mainBox {
+  margin: 0 auto;
+}
+
+.box {
+  display: inline-block;
+  font-size: 15px;
+  margin-right: 20px;
+}
+
+.boxContainer {
+  font-size: 0;
+}
+
+.hero-box {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.pf {
+  text-align: center;
+}
+
+.mg-u {
+  margin-top: 30px;
+}
+
+.mg-d {
+  margin-bottom: 20px;
+}
+
+.orgbtn {
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid #555;
+  padding: 10px 30px;
+  margin: 5px;
+  text-align: center;
+  outline: none;
+  /*アニメーションの指定*/
+  transition: ease .2s;
+  box-shadow: 0 0 2px gray;
+}
+
+.orgbtn span {
+  position: relative;
+  z-index: 3;
+  color: #333;
+}
+
+.orgbtn:hover span {
+  color: #fff;
+}
+
+.bgskew::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -130%;
+  background: #333;
+  width: 120%;
+  height: 100%;
+  transform: skewX(-25deg);
+}
+
+.bgskew:hover::before {
+  animation: be_anime .5s forwards;
+}
+
+@keyframes be_anime {
+  100% {
+    left: -10%;
+  }
+}
+
+.name {
+  font-size: 40px;
+}
+
+.mg-b {
+  margin-bottom: 60px;
+}
+
+.mg-c {
+  margin-bottom: 100px;
+}
+
+.explain p {
+  margin: 0px;
+}
+
+.pf-d {
+  text-align: center;
+}
+
+.anime_border {
+  position: relative;
+}
+
+.anime_border:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-bottom: -4px;
+  border-bottom: solid 1px rgb(100, 100, 100);
+  transform: translateX(-50%);
+  animation: border_anim 1s linear forwards;
+}
+
+@keyframes border_anim {
+  0% {
+    width: 0px;
+  }
+
+  50% {
+    width: 170px;
+  }
+
+  100% {
+    width: 290px;
+  }
+}
+
+.img-pro {
+  border-radius: 50%;
+  transition: all 0.6s ease 0s;
+  width: 180px;
+  height: 180px;
+  filter: drop-shadow(0px 0px 5px rgba(160, 160, 160, 0.7));
+}
+
+.img-pro:hover {
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+}
+
+.out-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-warpper {
+  position: relative;
+  padding: 0.25em 1em;
+}
+
+.hero-warpper:before, .hero-warpper:after {
+  content: '';
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  display: inline-block;
+}
+
+.hero-warpper:before {
+  border-left: solid 1px #28292c;
+  border-top: solid 1px #28292c;
+  top: 0;
+  left: 0;
+}
+
+.hero-warpper:after {
+  border-right: solid 1px #28292c;
+  border-bottom: solid 1px #28292c;
+  bottom: 0;
+  right: 0;
+}
+
+.card-size {
+  font-size: 1.4rem;
+}
+
+.c-text {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.btn-right {
+  text-align: right;
+}
+
+.form-group, .btn-right {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.form-g {
+  margin-bottom: 20px;
+}
+
+.text-error {
+  font-size: 13px;
+}
+
+.icon-space {
+  text-align: center;
+  font-size: 30px;
+}
+
+.icon {
+  width: 32px;
+}
+
+.outer {
+  display: table;
+}
+
+.account {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.accountname {
+  font-size: 13px;
+}
+
+.service-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.divbutton a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.messageBox {
+  display: none;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+.mg-btn {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .card-subtitle {
+    font-size: 16px;
+  }
+
+  .anime_border:before {
+    display: none;
+  }
+
+  .container {
+    padding-top: 120px;
+  }
+
+  .nav-btn {
+    padding: 20px;
+  }
+
+  .name {
+    font-size: 25px;
+  }
+
+  .subtext {
+    font-size: 14px;
+  }
+
+  .img-pro {
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    transition: all 0.6s ease 0s;
+  }
+
+  .orgbtn {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .pf-d {
+    text-align: left;
+  }
+}
