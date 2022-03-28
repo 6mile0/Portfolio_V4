@@ -39,6 +39,10 @@ a:active {
   padding-top: 150px;
 }
 
+.top-mg {
+  padding-top: 120px;
+}
+
 .nav-box {
   display: flex;
   background-color: #fff;

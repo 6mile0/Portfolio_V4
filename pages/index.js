@@ -173,7 +173,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mg-c">
+      <div className="mg-c top-mg">
         <div className="columns col-9 col-xs-11 mainBox">
           <h2>Profile</h2>
           <table className="table">
