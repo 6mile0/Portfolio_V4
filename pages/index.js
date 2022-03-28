@@ -173,23 +173,21 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="container mg-c">
-        <div className="columns">
-          <div className="column col-9 col-xs-11 mainBox">
-            <h2>Profile</h2>
-            <table className="table">
-              <tbody>
-                {Object.keys(profile).map((value, key) => {
-                  return (
-                    <tr key={key}>
-                      <td>{value}</td>
-                      <td>{profile[value]}</td>
-                    </tr>
-                  )
-                })}
-              </tbody>
-            </table>
-          </div>
+      <div className="mg-c">
+        <div className="columns col-9 col-xs-11 mainBox">
+          <h2>Profile</h2>
+          <table className="table">
+            <tbody>
+              {Object.keys(profile).map((value, key) => {
+                return (
+                  <tr key={key}>
+                    <td>{value}</td>
+                    <td>{profile[value]}</td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
         </div>
       </div>
 
