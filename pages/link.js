@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Header from '../components/header';
 
 const today = new Date(); // コピーライトの年表記用
@@ -63,7 +62,7 @@ const Links = () => {
     return (
         <div>
             <Header />
-            
+
             <div className="container mg-c">
                 <div className="columns">
                     <div className="column col-9 mainBox">
