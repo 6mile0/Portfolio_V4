@@ -1,14 +1,13 @@
-import Head from 'next/head'
-
 function Header() {
-
     return (
-        <Head>
-            <meta charset="UTF-8" />
-            <title>6mile&apos;s Portfolio</title>
-            <meta property="description" content="ろくまいるのポートフォリオです。" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        </Head>
+        <div>
+            <div className="nav-box">
+                <Link href="/"><a className="nav-btn">Home</a></Link>
+                <Link href="/work"><a className="nav-btn">Works</a></Link>
+                <Link href="/link"><a className="nav-btn">Links</a></Link>
+                <Link href="https://blog.6mile.dev/"><a className="nav-btn">Blog</a></Link>
+            </div>
+        </div>
     )
 }
 
