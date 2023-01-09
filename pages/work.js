@@ -4,32 +4,11 @@ const today = new Date(); // コピーライトの年表記用
 
 const works = [
     {
-        name: "Portfolio_V1",
-        discription: "初期ポートフォリオです。HTML,CSSを使っています。Bootstrap感満載です。",
-        lang: "HTML,CSS",
-        link: "https://github.com/6mile0/Portfolio_V1",
-        type: 0
-    },
-    {
         name: "学校からの情報通知bot V1",
         discription: "新型コロナウイルスによる臨時休校期間中の連絡をすべての生徒が円滑に受け取れるようにbotを開発しました。見るに耐えないコードだったので非公開です。",
         lang: "PHP,CSS,HTML",
         link: "",
         type: 1
-    },
-    {
-        name: "Portfolio_V2",
-        discription: "V1の次に作成したポートフォリオです。前作よりBootstrap感がなくなり少し良くなりましたが，色の使い方が相変わらず下手くそです。",
-        lang: "HTML,CSS",
-        link: "https://github.com/6mile0/Portfolio_V2",
-        type: 0
-    },
-    {
-        name: "Portfolio_V3",
-        discription: "V2.0の次に作成したポートフォリオです。UIkitを使用しました。気に入ったポートフォリオの一つです。",
-        lang: "HTML,CSS,UIkit",
-        link: "https://github.com/6mile0/Portfolio_V3",
-        type: 0
     },
     {
         name: "学校からの情報通知bot V2",
@@ -51,14 +30,7 @@ const works = [
         lang: "Node.js,JavaScript,HTML,CSS",
         link: "",
         type: 1
-    },
-    {
-        name: "Portfolio_V4",
-        discription: "このポートフォリオです。React.jsはちょこちょこ書いていましたが，Next.jsは初めてです。またポートフォリオのデザインから全面刷新したのは2年ぶりです。",
-        lang: "Next.js,HTML,CSS",
-        link: "https://github.com/6mile0/Portfolio_V4",
-        type: 0
-    },
+    }
 ]
 
 const Work = () => {

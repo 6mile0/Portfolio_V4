@@ -25,7 +25,6 @@ const age = Math.floor((Number(y1 + m1 + d1) - Number(y2 + m2 + d2)) / 10000);
 
 const profile = {
   Name: "ろくまいる / 6mile",
-  Description: "Flutter，Rust鋭意学習中の学生。",
   Birthday: "October 4th, 2003 (Age " + age + ")",
   University: "Tokyo University of Technology",
   Department: "Computer Sciences"
@@ -36,13 +35,6 @@ const skills = {
   Backend: "Node.js, PHP, Python, MySQL",
   Infrastructure: "Linux(Ubuntu,CentOS), Windows Server, Hyper-V, Apache, Nginx, IIS, Docker, Google Cloud Platform",
   Others: "VSCode, Git, Auth0, Yarn"
-}
-
-const nextLang = {
-  Frontend: "Vue.js, Flutter",
-  Backend: "Go, Rust, Java",
-  Infrastructure: "FreeBSD, Amazon Web Services",
-  Others: "Firebase, JetBrains(IntelliJ IDEA etc.)"
 }
 
 const histories = [
@@ -194,24 +186,6 @@ const Home = () => {
                   <tr key={key}>
                     <td>{value}</td>
                     <td>{skills[value]}</td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div className="mg-c">
-        <div className="columns col-9 col-xs-11 mainBox">
-          <h2>Next Learning</h2>
-          <table className="table">
-            <tbody>
-              {Object.keys(nextLang).map((value, key) => {
-                return (
-                  <tr key={key}>
-                    <td>{value}</td>
-                    <td>{nextLang[value]}</td>
                   </tr>
                 )
               })}
