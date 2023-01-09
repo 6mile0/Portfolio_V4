@@ -27,16 +27,10 @@ const accounts = [
         link: "https://github.com/6mile0"
     },
     {
-        name: "Mail(Genaral)",
-        account: "info@6mile.dev",
+        name: "Mail",
+        account: "me@6mile.dev",
         filename: "gmail",
-        link: "mailto:info@6mile.dev"
-    },
-    {
-        name: "Mail(Support)",
-        account: "service@6mile.dev",
-        filename: "gmail",
-        link: "mailto:service@6mile.dev"
+        link: "mailto:me@6mile.dev"
     },
     {
         name: "Qiita",
