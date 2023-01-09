@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Header from '../components/header';
 
 const today = new Date(); // コピーライトの年表記用
@@ -57,7 +56,7 @@ const works = [
         name: "Portfolio_V4",
         discription: "このポートフォリオです。React.jsはちょこちょこ書いていましたが，Next.jsは初めてです。またポートフォリオのデザインから全面刷新したのは2年ぶりです。",
         lang: "Next.js,HTML,CSS",
-        link: "https://github.com/6mile0/portfolio-V4.0",
+        link: "https://github.com/6mile0/Portfolio_V4",
         type: 0
     },
 ]
@@ -66,12 +65,6 @@ const Work = () => {
     return (
         <div>
             <Header />
-            <div className="nav-box">
-                <Link href="/"><a className="nav-btn">Home</a></Link>
-                <Link href="/work"><a className="nav-btn">Works</a></Link>
-                <Link href="/link"><a className="nav-btn">Links</a></Link>
-                <Link href="https://blog.6mile.dev/"><a className="nav-btn">Blog</a></Link>
-            </div>
 
             <div className="container mg-c">
                 <div className="columns">

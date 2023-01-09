@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useForm } from "react-hook-form";
 import Header from '../components/header';
 
@@ -100,7 +99,7 @@ const histories = [
   },
   {
     date: "2022/04/05",
-    event: "東京工科大学(コンピュータサイエンス学部 先進情報専攻)に入学予定",
+    event: "東京工科大学(コンピュータサイエンス学部 先進情報専攻)に入学",
     lg_Icon: true
   },
 ]
@@ -144,12 +143,6 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <div className="nav-box">
-        <Link href="/"><a className="nav-btn">Home</a></Link>
-        <Link href="/work"><a className="nav-btn">Works</a></Link>
-        <Link href="/link"><a className="nav-btn">Links</a></Link>
-        <Link href="https://blog.6mile.dev/"><a className="nav-btn">Blog</a></Link>
-      </div>
 
       <div className="container">
         <div className="hero wrapper hero-box hero-warpper">
