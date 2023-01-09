@@ -26,14 +26,14 @@ const age = Math.floor((Number(y1 + m1 + d1) - Number(y2 + m2 + d2)) / 10000);
 
 const profile = {
   Name: "ろくまいる / 6mile",
-  Description: "Flutter，Rust鋭意学習中のしがない学生。",
+  Description: "Flutter，Rust鋭意学習中の学生。",
   Birthday: "October 4th, 2003 (Age " + age + ")",
   University: "Tokyo University of Technology",
   Department: "Computer Sciences"
 }
 
 const skills = {
-  Frontend: "JavaSprict, Node.js, Next.js, React.js, CSS, HTML5",
+  Frontend: "JavaScript, Node.js, Next.js, React.js, CSS, HTML5",
   Backend: "Node.js, PHP, Python, MySQL",
   Infrastructure: "Linux(Ubuntu,CentOS), Windows Server, Hyper-V, Apache, Nginx, IIS, Docker, Google Cloud Platform",
   Others: "VSCode, Git, Auth0, Yarn"
@@ -124,7 +124,7 @@ const Home = () => {
           body: JSON.stringify(data),
         }).then((res) => {
           if (res.status === 200) {
-            console.log("送信が成功しました");
+            console.log("送信に成功しました");
             if (typeof window === 'object') {
               var messageBox = document.getElementById('result');
               var success_message = '<div class="toast toast-success" style="margin-top: 20px;"><i class="fas fa-check-circle"></i> 送信に成功しました。自動送信メールが送信されますのでご確認ください。(届いていない場合は迷惑メールフォルダをご確認ください)</div>';
