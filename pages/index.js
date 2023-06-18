@@ -33,8 +33,8 @@ const profile = {
 const skills = {
   Frontend: "JavaScript, Node.js, Next.js, React.js, CSS, HTML5",
   Backend: "Node.js, PHP, Python, MySQL",
-  Infrastructure: "Linux(Ubuntu,CentOS), Windows Server, Hyper-V, Apache, Nginx, IIS, Docker, Google Cloud Platform",
-  Others: "VSCode, Git, Auth0, Yarn"
+  Infrastructure: "Linux(Ubuntu,CentOS), Windows Server, Hyper-V, Apache, Nginx, IIS, Docker, Kubernetes",
+  Others: "VSCode, Git, Auth0, Yarn, Mackerel"
 }
 
 const histories = [
@@ -191,6 +191,9 @@ const Home = () => {
               })}
             </tbody>
           </table>
+          <div className="description">
+            <p>※未経験の技術であっても，積極的にキャッチアップします</p>
+          </div>
         </div>
       </div>
 
