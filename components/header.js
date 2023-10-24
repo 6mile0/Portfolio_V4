@@ -4,10 +4,9 @@ function Header() {
     return (
         <div>
             <div className="nav-box">
-                <Link href="/"><a className="nav-btn">Home</a></Link>
-                <Link href="/work"><a className="nav-btn">Works</a></Link>
-                <Link href="/link"><a className="nav-btn">Links</a></Link>
-                <Link href="https://blog.6mile.dev/"><a className="nav-btn">Blog</a></Link>
+                <Link className="nav-btn" href="/">Home</Link>
+                <Link className="nav-btn" href="/work">Works</Link>
+                <Link className="nav-btn" href="/link">Links</Link>
             </div>
         </div>
     )
