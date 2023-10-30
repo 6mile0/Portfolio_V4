@@ -255,40 +255,7 @@ const Home = () => {
       <div className="mg-c">
         <div className="col-9 col-xs-11 mainBox explain">
           <h2>Contact</h2>
-          <p>6mile.devドメインより不審なメール等が送付されている場合，誤字脱字，その他ご意見等ございましたら，大変お手数おかけ致しますが下記フォームよりご連絡頂けますと幸いです。</p>
-          <p>※Vercelがストリーミング応答に対応していないため，メッセージの送信に数分かかる場合があります。</p>
-
-          <div id="result"></div>
-          <div className="columns grid-lg mg-u">
-            <div className="column col-xs-12 mg-d">
-              <form className="form-group" onSubmit={handleSubmit(onSubmit)}>
-                <div className="form-g">
-                  <label className="form-label">Name</label>
-                  <input className="form-input" name="name" placeholder="お名前" {...register('name', { required: "Required" })} />
-                  {errors.name && <span className="text-error"><i className="fas fa-exclamation-triangle"></i> 名前は必須です</span>}
-                </div>
-
-                <div className="form-g">
-                  <label className="form-label">MailAddress</label>
-                  <input type="email" className="form-input" name="email" placeholder="メールアドレス" {...register('email', { required: "Required" })} />
-                  {errors.email && <span className="text-error"><i className="fas fa-exclamation-triangle"></i> メールアドレスは必須です</span>}
-                </div>
-
-                <div className="form-g">
-                  <label className="form-label">Message</label>
-                  <textarea className="form-input" name="content" placeholder="お問い合わせ内容" rows="3" {...register('content', { required: "Required" })} />
-                  {errors.content && <span className="text-error"><i className="fas fa-exclamation-triangle"></i> お問い合わせ内容は必須です</span>}
-                </div>
-
-                <p>※送信される情報はSSLで暗号化されます。</p>
-                <p>※いたずら防止のため，IPアドレスを記録しております。</p>
-
-                <div className="btn-right mg-btn">
-                  <button className="btn btn-primary" type="submit">Submit</button>
-                </div>
-              </form>
-            </div>
-          </div>
+          <p>ご連絡等は <code>info@6mile.dev</code> 宛までよろしくお願い致します。</p>
         </div>
       </div>
 
