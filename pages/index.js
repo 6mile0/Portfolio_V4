@@ -1,4 +1,3 @@
-import { useForm } from "react-hook-form";
 import Header from '../components/header';
 
 const birthDay = {
@@ -31,10 +30,10 @@ const profile = {
 }
 
 const skills = {
-  Frontend: "JavaScript, Node.js, Next.js, React.js, CSS, HTML5",
-  Backend: "Node.js, PHP, Python, MySQL",
-  Infrastructure: "Linux(Ubuntu,CentOS), Windows Server, Hyper-V, Apache, Nginx, IIS, Docker, Kubernetes",
-  Others: "VSCode, Git, Auth0, Yarn, Mackerel"
+  Frontend: "TypeScript, JavaScript, React, Next.js",
+  Backend: "Node.js, Python, Go(little experience)",
+  Infrastructure: "Linux(Ubuntu,CentOS), Apache, Nginx, Docker, Kubernetes",
+  Others: "VSCode, Git, Auth0, Mackerel"
 }
 
 const histories = [
@@ -97,41 +96,6 @@ const histories = [
 ]
 
 const Home = () => {
-
-  const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = async (data) => {
-
-    fetch('https://www.myexternalip.com/json') // 送信者IP取得
-      .then(res => res.json())
-      .then(json => {
-        data.senderIP = json.ip;
-
-        fetch("/api/mail", {
-          method: "POST",
-          headers: {
-            Accept: "application/json, text/plain, */*",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }).then((res) => {
-          if (res.status === 200) {
-            console.log("送信に成功しました");
-            if (typeof window === 'object') {
-              var messageBox = document.getElementById('result');
-              var success_message = '<div class="toast toast-success" style="margin-top: 20px;"><i class="fas fa-check-circle"></i> 送信に成功しました。自動送信メールが送信されますのでご確認ください。(届いていない場合は迷惑メールフォルダをご確認ください)</div>';
-              messageBox.innerHTML = success_message;
-            }
-          } else {
-            if (typeof window === 'object') {
-              var messageBox = document.getElementById('result');
-              var error_message = '<div class="toast toast-error" style="margin-top: 20px;"><i class="fas fa-times"></i> 送信に失敗しました。<a href="mailto:info@6mile.dev">info@6mile.dev</a>までお手数おかけ致しますがご連絡ください。</div>'
-              messageBox.innerHTML = error_message;
-            }
-          }
-        });
-      })
-  };
-
   return (
     <div>
       <Header />
